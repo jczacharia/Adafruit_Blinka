@@ -8,6 +8,7 @@
     common modules and operations, depending on platform support
 """
 import sys
+import adafruit_platformdetect
 
 # We intentionally are patching into this namespace as module names so skip the name check.
 # pylint: disable=invalid-name
@@ -16,6 +17,7 @@ import sys
 # detector directly elsewhere, just in case additional indirection is necessary
 # at some later point:
 
+detector = adafruit_platformdetect.Detector()
 chip_id = "IMX8MX"
 board_id = "CORAL_EDGE_TPU_DEV"
 
